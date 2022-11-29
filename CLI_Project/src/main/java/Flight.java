@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.TreeSet;
+
 import interfaces.Booking;
 
 public class Flight implements Booking {
@@ -11,6 +13,7 @@ public class Flight implements Booking {
         this.id = id;
         this.destination = destination;
         this.passengers = passengers;
+        ArrayList<Flight> availableFlights = new ArrayList<>();
     }
 
 
@@ -35,14 +38,15 @@ public class Flight implements Booking {
     }
 
     public void setPassengers(ArrayList<Passenger> passengers) {
-        this.passengers = passengers;
+        this.passengers = new ArrayList<>();
     }
     public void addNewFlight(String addNewFlight){
         Scanner id = new Scanner(System.in);
         System.out.println("Please input your flight id: ");
         Scanner destination = new Scanner(System.in);
         System.out.println("Please input your flight destination: ");
-
+//        TreeSet<String> passengerInfo = new TreeSet<>();
+//
     }
 
     public void countPassengers(int numberOfPassenger){
@@ -59,5 +63,9 @@ public class Flight implements Booking {
 
     public void displayFlights(String displayFlights){
 
+    }
+
+    public void addNewPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
     }
 }

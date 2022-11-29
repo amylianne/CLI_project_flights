@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Passenger {
     private String name;
-    private int id;
-    private int contactNumber;
+    private String id;
+    private String contactNumber;
 
-    public Passenger(String name, int id, int contactNumber) {
+    public Passenger(String name, String id, String contactNumber) {
         this.name = name;
         this.id = id;
         this.contactNumber = contactNumber;
@@ -23,7 +23,7 @@ public class Passenger {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -31,22 +31,10 @@ public class Passenger {
         return contactNumber;
     }
 
-    public void setContactNumber(int contactNumber) {
+    public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
     }
 
 
-    public void addNewPassenger(String addNewPassenger){
-        Scanner passengerName = new Scanner(System.in);
-        System.out.println("Please input the new passenger's name: " + passengerName);
-        Scanner passengerId = new Scanner(System.in);
-        System.out.println("Please input the new passenger's id: " + passengerId);
-        Scanner passengerContactNumber = new Scanner(System.in);
-        System.out.println("Please input the new passenger's contact number: " + passengerContactNumber);
-//        this.addNewPassenger();
-//        this.Passenger.addNewPassenger();
-//
-
-    }
 }
 
