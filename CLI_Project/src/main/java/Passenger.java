@@ -19,7 +19,7 @@ public class Passenger {
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -27,7 +27,7 @@ public class Passenger {
         this.id = id;
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 

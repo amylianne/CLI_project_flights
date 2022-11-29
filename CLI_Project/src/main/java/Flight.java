@@ -4,16 +4,16 @@ import java.util.TreeSet;
 
 import interfaces.Booking;
 
-public class Flight implements Booking {
+public class Flight {
     private String id;
     private String destination;
     private ArrayList<Passenger> passengers;
+    private ArrayList<Flight> availableFlights;
 
-    public Flight(String id, String destination, ArrayList<Passenger> passengers){
+    public Flight(String id, String destination){
         this.id = id;
         this.destination = destination;
-        this.passengers = passengers;
-        ArrayList<Flight> availableFlights = new ArrayList<>();
+        this.passengers = new ArrayList<>();
     }
 
 
@@ -40,14 +40,7 @@ public class Flight implements Booking {
     public void setPassengers(ArrayList<Passenger> passengers) {
         this.passengers = new ArrayList<>();
     }
-    public void addNewFlight(String addNewFlight){
-        Scanner id = new Scanner(System.in);
-        System.out.println("Please input your flight id: ");
-        Scanner destination = new Scanner(System.in);
-        System.out.println("Please input your flight destination: ");
-//        TreeSet<String> passengerInfo = new TreeSet<>();
-//
-    }
+
 
     public void countPassengers(int numberOfPassenger){
         this.passengers.size();
@@ -57,15 +50,8 @@ public class Flight implements Booking {
         this.passengers.remove(0);
     }
 
-    public void bookNumberOfPassengerOnFlight(int numberOfPassengersOnFlight){
-
+    public boolean bookPassengerOnFlight(){
+        return bookPassengerOnFlight();
     }
 
-    public void displayFlights(String displayFlights){
-
-    }
-
-    public void addNewPassenger(Passenger passenger) {
-        this.passengers.add(passenger);
-    }
 }
